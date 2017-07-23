@@ -29,4 +29,6 @@ let runBot = () =>{
 	});
 };
 
+// runBot();
+
 let every12Hours = setInterval(runBot, 1000*60*60*12);

@@ -34,7 +34,7 @@ Sometimes when you copy and paste the tokens and keys from Twitter's website, it
 
 If you have even a fraction of the fun with this (or a similar bot) as I had making this one, then you have suceeded marvelously.
 
-### Technologies
+### Technologies and Resources
 
 APIs:
 
@@ -50,3 +50,5 @@ Frameworks/Taskrunners/Etc.:
  * [Twit](https://github.com/ttezel/twit) -- Simplifies using the Twitter API in conjunction with Node.
  * [JQuery](https://jquery.com/) -- I used two different frameworks to make HTTP calls because...I forgot I had one installed already.
  * [Grunt](https://gruntjs.com/)
+
+Major Props to [The Coding Train](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw) for [this series of videos](https://www.youtube.com/watch?v=RF5_MPSNAtU) on making Twitter bots with Node that got me off on the right foot.
