@@ -4,7 +4,7 @@ let Twit = require('../lib/node_modules/twit'),
 	config = require("./config.js"),
 	T = new Twit(config);
 
-let postPic = (dogPic, name, sentence, rating) => {
+let postPic = (dogPic, name, sentence, rating, ending) => {
 	// first we must post the media to Twitter
 	T.post('media/upload', { media_data: dogPic }, function (err, data, response) {
 	  // now we can assign alt text to the media, for use by screen readers and
@@ -16,7 +16,7 @@ let postPic = (dogPic, name, sentence, rating) => {
 	  T.post('media/metadata/create', meta_params, function (err, data, response) {
 	    if (!err) {
 	      // now we can reference the media and post a tweet (media will attach to the tweet)
-	      var params = { status: `This is ${name}. ${sentence}. ${rating}`, media_ids: [mediaIdStr] };
+	      var params = { status: `This is ${name}. ${sentence}. ${rating} ${ending}`, media_ids: [mediaIdStr] };
 
 	      T.post('statuses/update', params, function (err, data, response) {
 	        console.log("Posted!");
