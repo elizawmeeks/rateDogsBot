@@ -1,5 +1,7 @@
 "use strict";
 
+// none of this is used in the app, jsut some playing around to get stuff right.
+
 var request = require('../lib/node_modules/request').defaults({ encoding: null });
 
 let myFirstPromise = new Promise((resolve, reject) => {

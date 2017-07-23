@@ -15,9 +15,11 @@ let getName = () => {
 		  url: 'https://randomuser.me/api/',
 		  dataType: 'json',
 		  success: function(data) {
+		  	// storing name in a local variable
 		    var name = capitalizeFirstLetter(data.results[0].name.first);
 				// console.log(data.results[0].gender);
 			var gender = data.results[0].gender;
+			// Storing the gender into a pronoun. Not using this at the moment because I went a different direction.
 			var pronoun;
 			switch (gender){
 				case "male":
@@ -30,6 +32,7 @@ let getName = () => {
 					pronoun = "They are";
 					break;
 			}
+			// Send back an object with the name and pronoun.
 			resolve ({Name: name, Pronoun: pronoun});
 		  }
 		});
@@ -42,6 +45,7 @@ let getDog = () => {
 		$.ajax({
 		    url:"https://dog.ceo/api/breeds/image/random"
 		}).done(data => {
+			// Send back the url
 			resolve(data.message);
 		});	
 	});

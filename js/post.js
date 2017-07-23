@@ -3,7 +3,7 @@
 let Twit = require('../lib/node_modules/twit'),
 	config = require("./config.js"),
 	T = new Twit(config);
-
+// Posting the picture and tweet to Twitter.
 let postPic = (dogPic, name, sentence, rating, ending) => {
 	// first we must post the media to Twitter
 	T.post('media/upload', { media_data: dogPic }, function (err, data, response) {

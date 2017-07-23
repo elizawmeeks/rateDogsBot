@@ -32,6 +32,8 @@ Apparently you have to have a phone number associated with the account to create
 
 Sometimes when you copy and paste the tokens and keys from Twitter's website, it adds random spaces at the beginning and the end. Some of the strings are so long that--especially if you use word wrap--it can be hard to see them there. Double check that there are no extra spaces or tabs at the beginning or ends of your keys and save yourself some frustration.
 
+When you've got it down loaded, navigate into the js folder, then run ```node main.js``` to run the program.
+
 If you have even a fraction of the fun with this (or a similar bot) as I had making this one, then you have suceeded marvelously.
 
 ### Technologies and Resources
