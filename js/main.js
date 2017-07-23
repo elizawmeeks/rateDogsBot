@@ -13,9 +13,11 @@ Promise.all([random.getName(), random.getDog(), getTweets()])
 		pronoun = values[0].Pronoun,
 		sentence = values[2][0],
 		rating = values[2][1];
+	console.log("mainjs sentence", sentence);
+	console.log("mainjs rating", rating);
 	console.log(name);
 	console.log(pronoun);
-	convert(values[1]).then(data=>{
-		postPic(data, name, sentence, rating);
+	convert(values[1]).then(dogPic=>{
+		postPic(dogPic, name, sentence, rating);
 	});
 });

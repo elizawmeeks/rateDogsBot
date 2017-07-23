@@ -11,7 +11,7 @@ let getTweets = () => {
 	return new Promise((resolve, reject) => {
 
 		// Getting we rate dogs tweets
-		T.get('statuses/user_timeline', {screen_name: "dog_rates", count: 30, include_rts: false, exclude_replies: true}, (err, data, response) => {
+		T.get('statuses/user_timeline', {screen_name: "dog_rates", count: 1000, include_rts: false, exclude_replies: true}, (err, data, response) => {
 			if (err){
 				console.log(err);
 			}else{
@@ -45,12 +45,13 @@ let getTweets = () => {
 						randomRateNo = Math.floor(Math.random()*(tweetsArray.length + 1));
 				console.log(tweetsArray[randomSentNo]);
 				console.log(ratingArray[randomRateNo]);
-				resolve(tweetsArray[randomSentNo], ratingArray[randomRateNo]);
+				let resolveArray = [tweetsArray[randomSentNo], ratingArray[randomRateNo]];
+				resolve(resolveArray);
 			}
 		});
 	});
 };
 
-getTweets();
-// module.exports = getTweets;
+// getTweets();
+module.exports = getTweets;
 // Getting we rate dogs tweets
