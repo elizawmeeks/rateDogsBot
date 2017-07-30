@@ -1,4 +1,4 @@
-# @rate_dogs_bot
+# @dog_rates_bot
 
 [Twitter Bot](https://twitter.com/dog_rates_bot) built as an homage to [@dog_rates](https://twitter.com/dog_rates).
 
